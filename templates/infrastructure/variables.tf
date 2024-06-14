@@ -41,6 +41,12 @@ variable "tags" {
   # }
 }
 
+variable "kube_version" {
+  description = "Kubernetes version"
+  default = "4.9.21_openshift"
+  type = string
+}
+
 variable "ibmcloud_api_key" {
   description = "The IBM Cloud API Key used to provision the schematics agent infrastructure resources. If not provided, then resources will be provisioned in currently logged in user account."
   type        = string

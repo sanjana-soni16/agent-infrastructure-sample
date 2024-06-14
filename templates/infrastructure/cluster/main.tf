@@ -11,7 +11,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
   resource_group_id = var.resource_group_id
   flavor            = var.machine_type
   worker_count      = var.workers_per_zone
-  kube_version      = length(regexall(".*openshift", var.kube_version)) > 0 ? var.kube_version : null
+  kube_version      = var.kube_version
   tags              = var.tags
   wait_till         = var.wait_till
   dynamic "zones" {

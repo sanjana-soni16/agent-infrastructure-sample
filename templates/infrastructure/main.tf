@@ -81,6 +81,7 @@ module "vpc_cluster" {
   workers_per_zone = local.workers_per_zone
   tags             = var.tags
   worker_pools     = local.worker_pools
+  kube_version     = var.kube_version
 }
 
 ##############################################################################
